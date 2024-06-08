@@ -1,0 +1,28 @@
+{
+  "name": "proyecto1cincuenta",
+  "version": "1.0.0",
+  "description": "Parcial Primer 50 ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lauragranados2021/Proyecto1Cincuenta.git"
+  },
+  "author": "Laura Nicol Granados Bayona",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lauragranados2021/Proyecto1Cincuenta/issues"
+  },
+  "homepage": "https://github.com/Lauragranados2021/Proyecto1Cincuenta#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.3"
+  }
+}
