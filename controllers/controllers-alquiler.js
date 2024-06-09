@@ -3,7 +3,7 @@ const oficina = require("../models/oficina");
 module.exports = {
   getAlquiler: async (req, res) => {
     try {
-      const result = await alquiler.find({});
+      const result = await alquiler.find({}).populate("oficina");
       return res.status(200).json({ data: result });
     } catch (err) {
       return res.status(500).json({ err: err });
@@ -12,7 +12,7 @@ module.exports = {
   getOneAlquiler:async(req,res)=>{
     try{
         const {id}=req.params;
-        const result = await alquiler.findById(id)
+        const result = await alquiler.findById(id).populate('oficina')
         return res.status(200).json({data:result})
     }catch(err){
       console.log(err)
