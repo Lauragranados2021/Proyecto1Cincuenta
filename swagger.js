@@ -46,9 +46,17 @@ const swaggerDefinition = {
       },
     },
 };
+
+const swaggerUICSSPath = path.resolve(
+__dirname,
+  "node_modules/swagger-ui-dist/swagger-ui.css"
+);
+const css = fs.readFileSync(swaggerUICSSPath, "utf8");
 const options = {
   swaggerDefinition,
-  apis: ["./Routes/routes-alquiler.js", "./Routes/routes-oficina.js"]
+  apis: ["./Routes/routes-alquiler.js", "./Routes/routes-oficina.js"],
+  customCss: css,
 }
+
 const swaggerSpec = swaggerJSDoc(options)
-module.exports = swaggerSpec
+module.exports = {swaggerSpec,options}
