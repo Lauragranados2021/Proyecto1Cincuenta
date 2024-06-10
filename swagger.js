@@ -10,7 +10,7 @@ const swaggerDefinition = {
     },
     servers: [
       {
-        url: 'https://proyecto1-cincuenta.vercel.app/oficinas',
+        url: 'https://proyecto1-cincuenta.vercel.app',
         description: 'Servidor de oficinas y alquiler de contratos',
       },
     ],
