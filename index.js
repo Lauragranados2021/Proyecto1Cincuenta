@@ -3,6 +3,9 @@ const cors=require('cors')
 const morgan=require('morgan')
 require('./drivers/connect-db')
 const app=express()
+const swaggerUI = require('swagger-ui-express')
+const swaggerSpec = require('./swagger')
+app.use('/docs',swaggerUI.serve,swaggerUI.setup(swaggerSpec))
 app.set('PORT',process.env.PORT||3001)
 app.use(cors());
 app.use(express.json());
