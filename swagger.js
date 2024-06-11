@@ -49,7 +49,7 @@ const swaggerDefinition = {
 
 const swaggerUICSSPath = path.resolve(
 __dirname,
-  "node_modules/swagger-ui-dist/swagger-ui.css"
+  "./node_modules/swagger-ui-dist/swagger-ui.css"
 );
 const css = fs.readFileSync(swaggerUICSSPath, "utf8");
 const options = {

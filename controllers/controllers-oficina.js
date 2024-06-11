@@ -27,6 +27,7 @@ module.exports={
         try{
             const ofis=new oficina(req.body)
             const saveofis=await ofis.save()
+            
             return res.status(200).json({state:true,data:saveofis})
 
 
