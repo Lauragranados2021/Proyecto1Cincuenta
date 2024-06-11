@@ -4,8 +4,16 @@ const{
 }=require('../controllers/controllers-alquiler')
 /**
  * @swagger
+ * tags:
+ *   name: Contratos
+ *   description: Operaciones hechas con los contratos de alquiler
+ */
+/**
+ * @swagger
  * /alquiler:
  *   get:
+ *     tags:
+ *      - Contratos
  *     summary: Lista de Alquiler
  *     description: Método que retorna todos los objetos alquiler
  *     responses:
@@ -62,11 +70,14 @@ routes.get('/',getAlquiler)
  * @swagger
  * /alquiler/{id}:
  *   post:
+ *     tags:
+ *      - Contratos
  *     summary: Crea un nuevo alquiler para una oficina
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
+ *         example: 6665b14d22f175fc581bb439
  *         schema:
  *           type: string
  *         description: Id de la oficina
@@ -78,7 +89,7 @@ routes.get('/',getAlquiler)
  *           schema:
  *             type: object
  *             properties:
- *               Code:
+ *               code:
  *                 type: Number
  *                 description: Id del contrato
  *                 example: 2345
@@ -92,7 +103,7 @@ routes.get('/',getAlquiler)
  *                 format: date
  *                 description: Fecha de fin del contrato
  *                 example: "2022-12-31"
- *               Price:
+ *               price:
  *                 type: Number
  *                 description: Precio del contrato
  *                 example: 690000
@@ -175,11 +186,14 @@ routes.post('/:id',saveAlquiler)
  * @swagger
  * /alquiler/{id}:
  *   put:
+ *     tags:
+ *       - Contratos
  *     summary: Actualiza un contrato
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
+ *         example: 666889c7974ab3c782889751
  *         schema:
  *           type: string
  *         description: Id del contrato a actualizar
@@ -211,7 +225,7 @@ routes.post('/:id',saveAlquiler)
  *               oficinasId:
  *                 type: string
  *                 description: Id de la oficina asociada al contrato
- *                 example: "8108277"
+ *                 example: "666773a94cb4390830993a01"
  *     responses:
  *       200:
  *         description: Contrato actualizado exitosamente
@@ -273,11 +287,14 @@ routes.put('/:id',updateAlquiler)
  * @swagger
  * /alquiler/{id}:
  *   delete:
+ *     tags:
+ *       - Contratos
  *     summary: Elimina un alquiler
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
+ *         example: 666889c7974ab3c782889751
  *         schema:
  *           type: string
  *         description: Id del alquiler a eliminar
@@ -345,11 +362,14 @@ routes.delete('/:id',deleteAlquiler)
  * @swagger
  * /alquiler/{id}:
  *   get:
+ *     tags:
+ *       - Contratos
  *     summary: Obtiene un alquiler por su id
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
+ *         example: 666773854cb43908309939fa
  *         schema:
  *           type: string
  *         description: Id del alquiler a obtener
