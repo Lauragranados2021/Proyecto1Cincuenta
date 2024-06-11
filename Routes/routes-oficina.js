@@ -4,16 +4,8 @@ const{
 }=require('../controllers/controllers-oficina')
 /**
  * @swagger
- * tags:
- *   name: Oficinas
- *   description: Operaciones relacionadas con estudiantes
- */
-/**
- * @swagger
  * /oficinas:
  *   get:
- *     tags:
- *       - Oficinas
  *     summary: Obtiene la lista de oficinas
  *     description: Retorna un objeto de oficinas
  *     responses:
@@ -66,8 +58,6 @@ routes.get('/',getOficinas)
  * @swagger
  * /oficinas:
  *   post:
- *     tags:
- *       - Oficinas
  *     summary: Crea una nueva oficina
  *     requestBody:
  *       description: Inserta un nuevo registro de oficina
@@ -77,11 +67,11 @@ routes.get('/',getOficinas)
  *           schema:
  *             type: object
  *             properties:
- *               code:
+ *               id:
  *                 type: string
  *                 description: Id de la oficina
  *                 example: 8108277
- *               name:
+ *               nombre:
  *                 type: string
  *                 description: Nombre de la oficina
  *                 example: Oficina Central
@@ -138,14 +128,11 @@ routes.post('/',saveOficina)
  * @swagger
  * /oficinas/{id}:
  *   put:
- *     tags:
- *       - Oficinas
  *     summary: Actualiza una oficina
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
- *         example: 66688c1a974ab3c782889761
  *         schema:
  *           type: string
  *         description: Id de la oficina a actualizar
@@ -227,14 +214,11 @@ routes.put('/:id',updateOficina)
  * @swagger
  * /oficinas/{id}:
  *   delete:
- *     tags:
- *       - Oficinas
  *     summary: Elimina una oficina
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
- *         example: 66688c1a974ab3c782889761
  *         schema:
  *           type: string
  *         description: Id de la oficina a eliminar
@@ -310,14 +294,11 @@ routes.delete('/:id',deleteOficina)
  * @swagger
  * /oficinas/{id}:
  *   get:
- *     tags:
- *       - Oficinas
  *     summary: Obtiene una oficina por su id
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
- *         example: 666773a94cb4390830993a01
  *         schema:
  *           type: string
  *         description: Id de la oficina a obtener
