@@ -2,6 +2,7 @@ const swaggerJSDoc = require('swagger-jsdoc')
 const fs = require("fs");
 const path = require("path");
 const swaggerDefinition = {
+    definition: {
     openapi: '3.0.0',
     info: {
       title: 'Documentacion de la API',
@@ -44,8 +45,9 @@ const swaggerDefinition = {
           },
         },
       },
-    },
-    apis: ["./Routes/routes-alquiler.js", "./Routes/routes-oficina.js"],
+    }, 
+  }, 
+    apis: [`${path.join(__dirname, "./Routes/*.js")}`],
 };
 
 const swaggerUICSSPath = path.resolve(
